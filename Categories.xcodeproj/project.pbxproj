@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		844CA48418CEEE350001CCC4 /* shake.gif in Resources */ = {isa = PBXBuildFile; fileRef = 844CA48318CEEE350001CCC4 /* shake.gif */; };
+		844CA48818CEF25E0001CCC4 /* UIView+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CA48718CEF25E0001CCC4 /* UIView+View.m */; };
 		84D149FA187AB63700579726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D149F9187AB63700579726 /* Foundation.framework */; };
 		84D149FC187AB63700579726 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D149FB187AB63700579726 /* CoreGraphics.framework */; };
 		84D149FE187AB63700579726 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D149FD187AB63700579726 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		84D14A1E187AB63700579726 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D149FD187AB63700579726 /* UIKit.framework */; };
 		84D14A26187AB63700579726 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D14A24187AB63700579726 /* InfoPlist.strings */; };
 		84D14A28187AB63700579726 /* CategoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D14A27187AB63700579726 /* CategoriesTests.m */; };
-		84D14A36187AB66C00579726 /* UIView+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D14A35187AB66C00579726 /* UIView+View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		844CA48318CEEE350001CCC4 /* shake.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shake.gif; sourceTree = "<group>"; };
+		844CA48618CEF25E0001CCC4 /* UIView+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+View.h"; sourceTree = "<group>"; };
+		844CA48718CEF25E0001CCC4 /* UIView+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+View.m"; sourceTree = "<group>"; };
 		84D149F6187AB63700579726 /* Categories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Categories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D149F9187AB63700579726 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84D149FB187AB63700579726 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,8 +60,6 @@
 		84D14A23187AB63700579726 /* CategoriesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CategoriesTests-Info.plist"; sourceTree = "<group>"; };
 		84D14A25187AB63700579726 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84D14A27187AB63700579726 /* CategoriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoriesTests.m; sourceTree = "<group>"; };
-		84D14A34187AB66C00579726 /* UIView+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+View.h"; sourceTree = "<group>"; };
-		84D14A35187AB66C00579726 /* UIView+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+View.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844CA48518CEF25E0001CCC4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				844CA48618CEF25E0001CCC4 /* UIView+View.h */,
+				844CA48718CEF25E0001CCC4 /* UIView+View.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		84D149ED187AB63700579726 = {
 			isa = PBXGroup;
 			children = (
@@ -164,20 +173,10 @@
 		84D14A32187AB66C00579726 /* My Categories */ = {
 			isa = PBXGroup;
 			children = (
+				844CA48518CEF25E0001CCC4 /* Categories */,
 				844CA48318CEEE350001CCC4 /* shake.gif */,
-				84D14A33187AB66C00579726 /* Views */,
 			);
 			path = "My Categories";
-			sourceTree = "<group>";
-		};
-		84D14A33187AB66C00579726 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				84D14A34187AB66C00579726 /* UIView+View.h */,
-				84D14A35187AB66C00579726 /* UIView+View.m */,
-			);
-			name = Views;
-			path = "Parallax Effect";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +282,7 @@
 				84D14A06187AB63700579726 /* main.m in Sources */,
 				84D14A13187AB63700579726 /* SARViewController.m in Sources */,
 				84D14A0A187AB63700579726 /* SARAppDelegate.m in Sources */,
-				84D14A36187AB66C00579726 /* UIView+View.m in Sources */,
+				844CA48818CEF25E0001CCC4 /* UIView+View.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
