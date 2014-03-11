@@ -22,7 +22,7 @@
     [super viewDidLoad];
  
 
-    [self.view addParallaxEffect];
+    [self.view addParallaxEffect:10];//Adjust this value based on your need
     
     shakeView = [[UIView alloc]initWithFrame:CGRectMake(100, 200, self.view.frame.size.width-200, self.view.frame.size.height-500)];
     shakeView.backgroundColor = [UIColor purpleColor];

@@ -10,14 +10,14 @@
 #import "UIView+View.h"
 
 @implementation UIView (View)
--(void)addParallaxEffect{
+-(void)addParallaxEffect:(CGFloat)value{
     UIInterpolatingMotionEffect *interpolationHorizontal = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
-    interpolationHorizontal.minimumRelativeValue = @-10.0;
-    interpolationHorizontal.maximumRelativeValue = @10.0;
+    interpolationHorizontal.minimumRelativeValue = [NSNumber numberWithFloat:-value];
+    interpolationHorizontal.maximumRelativeValue = [NSNumber numberWithFloat:value];
     
     UIInterpolatingMotionEffect *interpolationVertical = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
-    interpolationVertical.minimumRelativeValue = @-10.0;
-    interpolationVertical.maximumRelativeValue = @10.0;
+    interpolationVertical.minimumRelativeValue = [NSNumber numberWithFloat:-value];
+    interpolationVertical.maximumRelativeValue = [NSNumber numberWithFloat:value];
     
     [self addMotionEffect:interpolationHorizontal];
     [self addMotionEffect:interpolationVertical];

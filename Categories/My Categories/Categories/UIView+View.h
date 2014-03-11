@@ -11,7 +11,7 @@
 
 @interface UIView (View)
 
--(void)addParallaxEffect;
+-(void)addParallaxEffect:(CGFloat)value;
 
 -(void)shakeView:(CGFloat)value;
 
