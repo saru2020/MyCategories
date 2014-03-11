@@ -10,7 +10,7 @@ Adding the Categories here anything that i use hereafter in my projects.
 
 <br>
 
-![Mind Blown](https://github.com/saru2020/MyCategories/blob/master/Categories/My%20Categories/shake.gif)
+![Mind Blown](https://github.com/saru2020/MyCategories/blob/master/Categories/My Categories/shake.gif)
 
 <br>
 
