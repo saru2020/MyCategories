@@ -22,20 +22,27 @@
     [super viewDidLoad];
  
 
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
     [self.view addParallaxEffect:10];//Adjust this value based on your need
     
     shakeView = [[UIView alloc]initWithFrame:CGRectMake(100, 200, self.view.frame.size.width-200, self.view.frame.size.height-500)];
-    shakeView.backgroundColor = [UIColor purpleColor];
+    shakeView.backgroundColor = [UIColor brownColor];
     [self.view addSubview:shakeView];
     
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(performShakeOperation) userInfo:nil repeats:YES];
+//    [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(performShakeOperation) userInfo:nil repeats:YES];
+    [self floatView];
 }
 
 -(void)performShakeOperation{
     [shakeView shakeView:20];
+}
+
+-(void)floatView{
+    [shakeView floatLeft:0.05 value:5];
 }
 
 - (void)didReceiveMemoryWarning

@@ -43,5 +43,68 @@
     }];
 }
 
+///*
+//Floating View
+
+-(void)floatLeft:(float)angle value:(float)value{
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+                     animations:^{
+                         self.center = CGPointMake(self.center.x - value,
+                                                   self.center.y - value);
+                         self.transform = CGAffineTransformMakeRotation(-angle);
+                         [self floatAnother:angle value:value];
+                     }
+                     completion:NULL];
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+                     animations:^{
+                         self.center = CGPointMake(self.center.x + value,
+                                                   self.center.y - value);
+                         self.transform = CGAffineTransformMakeRotation(angle);
+                     }
+                     completion:NULL];
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+                     animations:^{
+                         self.center = CGPointMake(self.center.x - value,
+                                                   self.center.y + value);
+                         self.transform = CGAffineTransformMakeRotation(angle);
+                     }
+                     completion:NULL];
+    
+//    [UIView animateWithDuration:2.0
+//                          delay:0.0
+//                        options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+//                     animations:^{
+//                         self.center = CGPointMake(self.center.x + value,
+//                                                   self.center.y + value);
+//                         self.transform = CGAffineTransformMakeRotation(angle);
+//                     }
+//                     completion:NULL];
+    
+}
+
+-(void)floatAnother:(float)angle value:(float)value{
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+                     animations:^{
+                         self.center = CGPointMake(self.center.x + value,
+                                                   self.center.y + value);
+                         self.transform = CGAffineTransformMakeRotation(angle);
+                     }
+                     completion:NULL];
+}
+
+-(void)floatRight:(UIView*)view{
+}
+
+//*/
 
 @end

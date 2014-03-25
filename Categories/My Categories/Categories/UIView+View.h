@@ -15,4 +15,6 @@
 
 -(void)shakeView:(CGFloat)value;
 
+-(void)floatLeft:(float)angle value:(float)value;
+
 @end
