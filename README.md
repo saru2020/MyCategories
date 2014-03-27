@@ -32,8 +32,22 @@ Adding the Categories here anything that i use hereafter in my projects.
 
 <br>
 
-![Shake Effect](https://raw.githubusercontent.com/saru2020/MyCategories/master/Categories/My%20Categories/float.gif)
+![Float Effect](https://raw.githubusercontent.com/saru2020/MyCategories/master/Categories/My%20Categories/float.gif)
 
 <br>
 
     ["your view" floatLeft:0.05 value:5]; // 0.05 = Angle, at which the view must rotate ; 5 = Value, adjust for floating effect
+
+
+<br>
+
+<b><u> To Move an UIView across the screen randomly (Use it for anything, For Ex: Animating background, Game animation, Effects, etc...) : </u></b><br/>
+<i> Just Drag & Drop the “UIView+View.h” & “UIView+View.m” in your project, then import it in your class and use the below line of code to apply it to your/any view. </b>
+
+<br>
+
+![Move Effect](https://raw.githubusercontent.com/saru2020/MyCategories/master/Categories/My%20Categories/Move.gif)
+
+<br>
+
+    ["your view" move];
