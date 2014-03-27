@@ -34,7 +34,8 @@
 
 -(void)viewDidAppear:(BOOL)animated{
 //    [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(performShakeOperation) userInfo:nil repeats:YES];
-    [self floatView];
+//    [self floatView];
+    [shakeView move];
 }
 
 -(void)performShakeOperation{

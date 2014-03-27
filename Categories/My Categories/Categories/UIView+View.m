@@ -8,6 +8,7 @@
 
 
 #import "UIView+View.h"
+#define kMovingSpeed 250 //pixel per second
 
 @implementation UIView (View)
 -(void)addParallaxEffect:(CGFloat)value{
@@ -103,6 +104,43 @@
 }
 
 -(void)floatRight:(UIView*)view{
+}
+
+//*/
+
+///*
+//Move UIView Randomly across the screen
+- (CGFloat) distanceBetweenTwoPoints: (CGPoint) point1 : (CGPoint) point2 {
+    CGFloat dx = point2.x - point1.x;
+    CGFloat dy = point2.y - point1.y;
+    return sqrt(dx*dx + dy*dy );
+}
+
+-(void) move{
+    UIView *view = self;
+    CGPoint viewCenter = view.center;
+    CGFloat x = 0;
+    if (viewCenter.x == 320) {
+        x = 0;
+    }
+    else
+        x = 320;
+    
+    CGPoint nextCenter = CGPointMake(x, arc4random() % (([self.superview bounds].size.height > 480)?568:460));//or chech for orientation as well
+    NSLog(@"nextCenter : %@",NSStringFromCGPoint(nextCenter));
+    if (CGPointEqualToPoint(viewCenter, nextCenter))
+        [self move];
+    
+    float distance = [self distanceBetweenTwoPoints:viewCenter :nextCenter];
+    double time = distance / kMovingSpeed;
+    
+    [UIView animateWithDuration:time
+                     animations:^{
+                         [view setCenter:nextCenter];
+                     }
+                     completion:^(BOOL finished) {
+                         [self move];
+                     }];
 }
 
 //*/

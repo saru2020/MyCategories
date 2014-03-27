@@ -17,4 +17,6 @@
 
 -(void)floatLeft:(float)angle value:(float)value;
 
+-(void) move;
+
 @end
